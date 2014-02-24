@@ -1,0 +1,24 @@
+\input{header.tex}
+\begin{document}
+
+\fontsize{20}{24}
+\center{\bfseries Теория вероятности}
+\line(1,0){500}
+\fontsize{12}{15}
+\begin{enumerate}
+\item Правило произведения
+\item Перестановки $ P_n = n! $
+\item Размещения $ A^k_n = \frac{n!}{(n-k)!} $
+\item Сочетания $ C^k_n = \frac{n!}{k!(n-k)!} $
+\item Гипергеометрическое распределение: M из N всего объектов выделены. P(A:\{m выдел. среди n вытянутых\}):\\
+      $ P(A)=\frac{C^m_M C^{n-m}_{N-M}}{C^n_N} $
+\item Из N частиц: ${n_1,n_2,...,n_k}$ - k типов. Выбирается m, A:\{${m_1,m_2,...,m_k}$\}.\\
+      $ P(A)=\frac{\prod\limits_k C^{m_k}_{n_k}}{C^m_N} $
+\item Формула разбиения множества на группы: l различных групп n элементов всего: 
+      $ \left\{ \begin{smallmatrix}
+      n_1 \rightarrow 1\, gr. \\n_2 \rightarrow 2\, gr. \\...\\n_l\rightarrow l\, gr. 
+      \end{smallmatrix} \right\} $\\
+      $ P=\frac{k}{n} \Leftarrow k=\frac{n!}{\prod\limits_k n_k!} $
+\end{enumerate}
+\line(1,0){500}
+\end{document}
