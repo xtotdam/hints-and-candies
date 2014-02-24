@@ -1,0 +1,6 @@
+*.pdf
+*.aux
+*.log
+*.synctex.gz
+*(busy)
+*.dvi

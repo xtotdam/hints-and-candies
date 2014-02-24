@@ -1,0 +1,42 @@
+\input{header.tex}
+\begin{document}
+
+\fontsize{20}{24}
+\center{\bfseries Quantum mechanics}
+\line(1,0){500}
+\fontsize{12}{15}
+\begin{enumerate}
+\item Скалярное произведение
+	\begin{enumerate}
+	     \item $\braket{\phi}{\psi}$
+            \item $\bra{\phi}(\alpha_1\ket{\psi_1}+\alpha_2\ket{\psi_2})=\alpha_1\braket{\phi}{\psi_1}+\alpha_2\braket{\phi}{\psi_2}$
+            \item $\braket{\psi}{\psi}\geq 0$
+	\end{enumerate}
+      $\braket{\psi}{\phi}=\int\psi^*\phi dx;\;\braket{\psi}{\psi}=\int\psi^*\psi dx =\int\abs{\psi}^2=\qnorm{\psi}\geq 0$
+\item Коммутатор\\
+      $\commlr{A}{B}=\hat{A}\hat{B}-\hat{B}\hat{A}$
+      \begin{enumerate}
+            \item $ \commlr{A}{B}=-\commlr{B}{A} $
+            \item $ \left[ \lambda\hat{A},\hat{B}\hat{C} \right] = \lambda\commlr{A}{B} + \lambda\commlr{A}{C} $
+      \end{enumerate}
+      $\commlr{x}{p}=i\hbar$
+\item $ \comml{A}{\hat{B}\hat{C}} = \hat{B}\commlr{A}{C} + \commlr{A}{B}\hat{C} $\\
+      $ \commr{\hat{A}\hat{B}}{C} = \hat{A}\commlr{B}{C} + \commlr{A}{C}\hat{B} $
+\item $ \hat{f}(\hat{A})=\sum\limits_{n=0}^{\infty}f_n \hat{A}^n $\\
+      $\comml{A}{\hat{f}(\hat{A})} = 0\;\forall f $
+\item $ e^{z\hat{A}}=\sum \frac{z^n}{n!}\hat{A}^n $ \\
+      $ e^{z\hat{A}}e^{-z\hat{A}} = 1 $
+\item $ \commlr{A}{B}=\lambda \Rightarrow \comml{A}{\hat{f}(\hat{B})}=\lambda \pd{\hat{f}(\hat{B})}{\hat{B}} $
+\item $ e^{z\hat{A}}\hat{B}e^{-z\hat{A}} = \hat{B} + \frac{z}{1!}\underbrace{\commlr{A}{B}}_{K_1} + \frac{z^2}{2!}\underbrace{\commlr{A}{K_1}}_{K_2} = \hat{B}+\sum\limits_{n=1}^{\infty}\frac{z^n}{n!}\commlr{A}{K_n} $
+\item Эрмитово сопряжение $\hat{A}\rightarrow\hat{A}^\dagger $\\
+      $ \matrixel{\phi}{\hat{A}}{\psi} = \matrixel{\psi}{\hat{A}^\dagger}{\phi}^* $\\
+      $ (\hat{A}^\dagger)^\dagger = \hat{A} $
+\item $ (\hat{A_1} \cdot ... \cdot \hat{A_n})^\dagger = \hat{A_n}^\dagger \cdot ... \cdot \hat{A_1}^\dagger $
+\item Самосопряженный оператор $\hat{A}^\dagger = \hat{A} $\\
+      $ \matrixel{\phi}{\hat{A}}{\psi} = \matrixel{\psi}{\hat{A}}{\phi}^* $\\
+      $ (e^{i\alpha\hat{A}})^\dagger = e^{-i\alpha\hat{A}} $
+\item Унитарный оператор $ \hat{S}\hat{S}^\dagger = 1 $\\
+      $ e^{i\alpha\hat{A}} $ - унитарен
+\end{enumerate}
+\line(1,0){500}
+\end{document}
