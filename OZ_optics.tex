@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsfonts}
+\usepackage[fleqn]{amsmath} 
+\usepackage[russian,english]{babel}
+\usepackage{anyfontsize}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+\geometry{left=2cm}
+\geometry{right=1.5cm}
+\geometry{top=1cm}
+\geometry{bottom=2cm}
+
+\DeclareMathOperator{\sinc}{sinc}
+%\DeclareMathOperator{\tg}{tg}
+
+\begin{document}
+
+\fontsize{20}{24}
+\center{\bfseries ОПТИКА}
+\line(1,0){500}
+\fontsize{15}{18}
+
+\begin{flalign*}
+&w = \frac{W}{V} = \frac{W}{c \cdot \Delta t \cdot S} = \frac{I}{c}\;;\; dW = \langle k \rangle \tau \cos \theta dS \\\\
+&I = \langle \lvert S \rvert \rangle_T = \frac{\varepsilon \varepsilon_0 E_0^2}{2}\upsilon = \langle k \rangle \cdot t;~ \langle k \rangle = \frac{1}{2}c \varepsilon_0 E^2 \\\\
+&f_\tau = (1 - \rho)w \sigma \sin(\theta)\cos(\theta)\\
+&f_n = (1+\rho)w \sigma \cos^2(\theta)\\
+&P = \frac{f}{\sigma};~dF = PdS \\\\
+& \frac{\partial H_z}{\partial x} = -\varepsilon \varepsilon_0 \frac{\partial E_y}{\partial t};\quad
+\frac{\partial E_y}{\partial x} = -\mu \mu_0 \frac{\partial H_z}{\partial t}\\\\
+&H_0\sqrt{\mu \mu_0} = E_0\sqrt{\varepsilon \varepsilon_0}\;;\; S = [E \times H]\;;\; B = \mu_0 H\\\\
+&\upsilon = \frac{1}{\sqrt{\varepsilon \varepsilon_0 \mu \mu_o}}\;;\; dS_{sphere} = R^2 \sin \theta d\varphi d\theta
+\end{flalign*}
+\line(1,0){500}\\ 
+\begin{flalign*}
+&\Delta x = \frac{\lambda L}{d} = \frac{\lambda}{\alpha} \;;\; S = 2L \tg{\alpha} - interf. area\\
+& m_{max} = \frac{\lambda}{\Delta \lambda}\;;\; N = \left[ \frac{S}{\Delta x} \right] +1\;;\; h' = h(n-1)
+\end{flalign*}
+\hfill Зеркала Френеля
+\begin{align*}
+\Delta x = \frac{\lambda (L + r)}{2 r \alpha}
+\end{align*}
+\hfill Бипризма
+\begin{align*}
+\Delta x = \frac{\lambda(a+b)}{2 a \alpha (n-1)} \; \left(= \frac{\lambda}{2(n-1)\alpha}\right)
+\end{align*}
+\hfill Кольца Ньютона
+\begin{align*}
+2 \delta_m = m\lambda\;;\; \delta_m = \frac{r_m^2}{2R}\;;\; r_{dark} = \sqrt{mR \lambda}\;;\; r_{light} = \sqrt{\left(m+\frac{1}{2}\right)R \lambda}
+\end{align*}
+\hfill Билинза
+\begin{align*}
+\Delta x = \frac{\lambda}{\theta} = \frac{\lambda a}{d}\;;\; N = \frac{x}{\Delta x}\;;\; x = \theta \cdot b\;;\; F = L = a
+\end{align*}
+\hfill Тонкие пленки
+\begin{align*}
+ 2 h n \cos \varphi = m\lambda \;(= \Delta)
+\end{align*}
+\hfill Интерферометр Майкельсона
+\begin{align*}
+2 h \cos \varphi = m \lambda\;;\; \varphi = \frac{R_n}{f}\;;\; x = \frac{\lambda^2}{2 \delta \lambda}
+\end{align*}
+\hfill Клин
+\begin{align*}
+2 x n \sin \alpha = \Delta \;;\; V = \lvert \sinc \frac{\delta \omega}{2} \tau \rvert = \lvert \sinc \frac{2 \pi}{c} \frac{\delta \nu}{2}\Delta \rvert
+\end{align*}
+\hfill Фабри-Перо
+\begin{align*}
+f \cdot \tg \varphi = r_m\;;\; \Delta = 2dn\cos \alpha = m\lambda
+\end{align*}
+\line(1,0){500}\\ 
+\begin{flalign*}
+&r_n^2 = n \lambda \frac{ab}{a+b}\;;\; I(\varphi) = 2 I_0 (1-\cos{\varphi})\;;\; d \sin{\varphi}\cos{\theta} = m \lambda\\\\
+&\Delta \varphi = \frac{R^2}{2}\left(\frac{1}{a}+\frac{1}{b}\right) - added\; by\; lens
+\end{flalign*}
+\line(1,0){500}\\ 
+\begin{flalign*}
+&I=I_0 \cos^2{\varphi}\;;\;k(n_o-n_e)d = \delta\;;\; h = \frac{m \lambda}{k(n_o-n_e)}\\\\
+&\upsilon_o = \frac{c}{n_o}\;;\; \upsilon_e = c \sqrt{ \frac{\sin^2{\varphi}}{n_e^2}+\frac{\cos^2{\varphi}}{n_o^2}}\;;\;
+\Delta = \frac{I_{max}-I_{min}}{I_{max}+I_{min}} = \frac{I_{pol}}{I_{pol}+I_{nat}}\\\\
+&45^o\;:\; I_{\parallel} = I_0 \cos^2{\frac{\delta}{2}}\;;\; I_{\perp}=I_0 \sin^2{\frac{\delta}{2}}
+\end{flalign*}
+\line(1,0){500}\\ 
+\begin{flalign*}
+&\frac{1}{a}+\frac{1}{b}=\frac{1}{f}\;;\;\Phi = \Phi_1+\Phi_2 -d\Phi_1 \Phi_2\;;\;R = mN\;;\;N = \frac{L}{d}\;;\;d = m\lambda\\\\
+&(m+1)\lambda = m(\lambda + \Delta \lambda)\;;\;D_\varphi=\frac{\delta \varphi}{\delta \lambda} \approx \frac{m}{d}\\\\
+&u = \upsilon + k \frac{d \upsilon}{d k} = \upsilon - \lambda \frac{d \upsilon}{d \lambda}\;;\; u = \frac{d \omega}{d k}\;;\;
+\nu = \frac{\omega}{2 \pi}\;;\;\upsilon = \frac{\omega}{k} = \frac{c}{n}
+\end{flalign*}
+\hfill \scalebox{.1}{Created by xtotdam.}
+\end{document}
