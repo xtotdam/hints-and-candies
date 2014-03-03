@@ -1,5 +1,6 @@
 \input{header.tex}
 \begin{document}
+\rfoot{\praiseme{Xtotdam}}
 
 \fontsize{20}{24}
 \center{\bfseries Теория вероятности}
@@ -32,7 +33,7 @@
 \item $A\cup B$ - объединение = ``или''
 \item $A\cap B=\varnothing \Rightarrow A\cup B = A+B$
 \item $A\backslash B = A\cap\bar{B}$ - только А без В
-\item $A \circ B = A\vartriangle B = (A\cup B)\backslash(A\cap B)=(A\cup B)\cap\overline{(A\cap B)} $ - симметрическая разность
+\item $A \circ B = A\triangle B = (A\cup B)\backslash(A\cap B) =(A\backslash B)\cup(B\backslash A)=(A\cup B)\cap\overline{(A\cap B)} $ - симметрическая разность
 \item $\left\{\begin{array}{l}A\cap A=A\\ A\cup A=A\end{array}\right.$;
       $\left\{\begin{array}{l}A\cap \Omega=A\\ A\cup \Omega=\Omega\end{array}\right.$;
       $\left\{\begin{array}{l}A\cap \varnothing=\varnothing\\ A\cup \varnothing=A\end{array}\right.$;
@@ -43,6 +44,14 @@
 \item $\left\{\begin{array}{l} \overline{A\cup B}=\bar{A}\cap\bar{B}\\\overline{A\cap B}=\bar{A}\cup\bar{B}\end{array}\right.$ - законы де Моргана
 \item $A\subset B\Rightarrow\bar{B}\subset\bar{A}=\bar{A}\supset\bar{B}$
 \end{enumerate}
-\line(1,0){500}
-\vfill \hfill \scalebox{.2}{ \textcircled{\scalebox{.5}{CC}} \textcircled{\scalebox{.5}{BY}} \textcircled{\scalebox{.5}{SA}} Xtotdam, \the\year}
+\newpage
+\begin{enumerate}
+\item $P(A)\in [0,1]$
+\item $\left\{\begin{array}{l} P(\varnothing)=0\\P(\Omega)=1 \end{array}\right.$; $ P(\bar{A})=1-P(A) $
+\item $A\cap B=\varnothing \Rightarrow P(A\cup B)=P(A)+P(B)$
+\item $A\subset B\Rightarrow P(A\backslash B)=P(A)-P(B)$
+\item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+\item $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$
+\end{enumerate}
+\vfill\line(1,0){500}
 \end{document}

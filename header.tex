@@ -2,10 +2,14 @@
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb,amsfonts}
-\usepackage[fleqn]{amsmath} 
+\usepackage[fleqn]{amsmath}
 \usepackage[russian,english]{babel}
 \usepackage{anyfontsize}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{fancy}
 
 \usepackage{geometry}
 \geometry{left=2cm}
@@ -39,3 +43,5 @@
 \let\divsymb=\div % rename builtin command \div to \divsymb
 \renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
 \newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+
+\newcommand{\praiseme}[1]{\scalebox{.4}{ \textcircled{\scalebox{.5}{CC}} \textcircled{\scalebox{.5}{BY}} \textcircled{\scalebox{.5}{SA}} #1, \the\day.\the\month.\the\year}}
