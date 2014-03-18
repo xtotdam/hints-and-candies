@@ -1,0 +1,204 @@
+\input{header.tex}
+\begin{document}
+\rfoot{\praiseme{Xtotdam}}
+
+\fontsize{20}{24}
+\center{\bfseries Electrodynamics}
+\line(1,0){500}
+\fontsize{12}{15}
+\begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
+\item $\left\{\begin{array}{l}
+            \rot{H}=\frac{1}{c}\pd{\vec E}{t}+\frac{4\pi}{c}\vec{j}\\
+            \rot{E}=-\frac{1}{c}\pd{\vec{H}}{t}\\
+            \div{H}=0\\
+            \div{E}=4\pi\rho
+      \end{array}\right.$  ;
+      $\vec{F}=e\vec{E}+\frac{e}{c}\vmult{V}{H} $
+\inlineitem $\left\{\begin{array}{l}
+            \oint\limits_L\scmult{H}{dl} = \frac{4\pi}{c} \int\limits_S \scmult{j}{dS}+\frac{1}{c}\pd{}{t}\int\limits_S\scmult{E}{dS}\\
+            \oint\limits_L\scmult{E}{dl} = -\frac{1}{c}\pd{}{t}\int\limits_S\scmult{H}{dS}\\
+            \oint\limits_S\scmult{H}{dS} = 0\\
+            \oint\limits_S\scmult{E}{dS} = 4\pi\int\limits_V\rho dV
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \div{j}+\pd{\rho}{t}=0\\
+            \equiv\;\partial_\alpha j^\alpha = 0\\
+            \oint\limits_S\scmult{j}{dS}+\d{}{t}\int\limits_V\rho dV=0
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \frac{c}{4\pi}\operatorname{div}\vmult{E}{H}+\d{}{t}\frac{E^2+H^2}{8\pi}+\scmult{E}{j}=0\\
+            \equiv\;\frac{c}{4\pi}\operatorname{div}\vec{\sigma}+\d{w}{t}+\scmult{E}{j}=0\\
+            \frac{c}{4\pi}\oint\limits_S\vmult{E}{H}\vec{dS}+\d{}{t}E_f+\int\limits_V\scmult{E}{j}dV=0
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \vec{E}=-\gradn{\varphi}-\frac1{c}\pd{\vec{A}}{t}\\
+            \vec{H}=\rot{A}
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \square\vec{A}=-\frac{4\pi}{c}\vec{j}(\vec{r},t)\\
+            \square\varphi=-4\pi\rho(\vec{r},t)
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \vec{A}=\vec{A}'+\vec{\nabla}f(\vec{r},t)\\
+            \varphi = \varphi'-\frac1{c}\pd{f(\vec{r},t)}{t}
+      \end{array}\right.$  ;
+      $ \partial_\alpha A^\alpha = 0 $
+\item $\left\{\begin{array}{l}
+            \text{ДСК: }\Delta = \pdd{}{x}+\pdd{}{y}+\pdd{}{z}\\
+            \text{ЦСК: }\Delta = \frac1{r}\pd{}{r}(r\pd{}{r})+\frac1{r^2}\pdd{}{\varphi}+\pdd{}{z}\\
+            \text{СфСК: }\Delta = \frac1{r^2}\pd{}{r}(r^2\pd{}{r})+\frac1{r^2\sin\theta}\pd{}{\theta}(\sin\theta\pd{}{\theta})+\frac1{r^2\sin^2\theta}\pdd{}{\varphi}
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \Delta\varphi(\vec{r})=-4\pi\rho\\
+            \Delta\vec{A}(\vec{r})=-\frac{4\pi}{c}\vec{j}
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \varphi = \int\limits_V dV'\, \frac{\rho(\vec{r'},\tau)}{\abs{\vec{r}-\vec{r'}}}\\
+            \vec{A} = \frac1{c}\int\limits_V dV'\, \frac{\vec{j}(\vec{r'},\tau)}{\abs{\vec{r}-\vec{r'}}}
+      \end{array}\right.$  ;
+      $ \tau = t-\frac{\abs{\vec{r}-\vec{r'}}}{c} $
+\item $\left\{\begin{array}{l}
+            \vec{d} = \int\limits_V\vec{r'}\rho(\vec{r'})dV' =\sum q_a \vec{r_a}\\
+            \varphi(\vec{r}) = \scmult{r}{d}/r^3\\
+            \vec{E} = (3\scmult{r}{d}\vec{r}-\vec{d}r^2)/r^5\\
+            \varepsilon = -\scmult{E}{d}
+      \end{array}\right.$  ;
+      $\vec{d}$ независим от выбора СК, если $\sum q_a=0 $
+\item $\left\{\begin{array}{l}
+            \vec{m} = \frac1{2c}\int\limits_V dV'\,[\vec{r'}\times\vec{j}(\vec{r'})]\\
+            \vec{A} = \vmult{m}{r}/r^3\\
+            \vec{H} = (3\scmult{r}{m}\vec{r}-\vec{m}r^2)/r^5\\
+            \varepsilon = -\scmult{H}{m}
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \rot{H}=\frac1{c}\pd{\vec{E}}{t}\\
+            \rot{E}=-\frac1{c}\pd{\vec{H}}{t}\\
+            \div{H}=0\\
+            \div{E}=0\\
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \square\vec{E}=0\\
+            \square\vec{H}=0\\
+            \vec{E}=\vec{E_0}\exp(-i(\omega t-\scmult{k}{r}))\\
+            \vec{H}=\vec{H_0}\exp(-i(\omega t-\scmult{k}{r}))
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \vmult{k}{H}=-\frac{\omega}{c}\vec{E}\\
+            \vmult{k}{E}=\frac{\omega}{c}\vec{H}\\
+            \scmult{k}{E}=\scmult{k}{H}=0
+      \end{array}\right.$\\
+      \begin{enumerate}
+      \item $\vec{k}\perp\vec{E}\perp\vec{H} $
+      \item $k=\frac{\omega}{c} $
+      \item $\abs{\vec{E}} = \abs{\vec{H}}$
+      \end{enumerate}
+      Пусть $\vec{k}=k\vec{e_z} $\\
+      \begin{enumerate}
+      \item $\frac{E_y}{E_x}=\const\Rightarrow$ линейная поляризация
+      \item $\frac{E_x^2}{E_0^2}+\frac{E_y^2}{E_0^2}=1 \Rightarrow$ круговая поляризация
+      \item $\frac{E_x^2}{E_{x0}^2}+\frac{E_y^2}{E_{y0}^2}=1 \Rightarrow$ эллиптическая поляризация
+      \end{enumerate}
+\item $\left\{\begin{array}{l}
+            \varphi(\vec{r}{\cdot}t)=(\vec{n},\dot{\vec{d}}(\tau))/cr\\
+            \vec{A}=\dot{\vec{d}}(\tau)/cr
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \vec{E}=[[\ddot{\vec{d}}(\tau){\times}\vec{n}]{\times}\vec{n}]/c^2 r\\
+            \vec{H}=[\ddot{\vec{d}}{\times}\vec{n}]/c^2 r
+      \end{array}\right.$  ;
+      $\tau=t-\frac{r}{c} $\\
+      $I=\frac{2\ddot{\vec{d^2}}}{3c^3};\;\d{I}{\Omega}=\frac{[\ddot{\vec{d}}{\times}\vec{n}]^2}{4\pi c^3};\;
+      r\ll \lambda \equiv \scmult{k}{r}\ll 1 $ - ближняя зона
+\item $\vec{F}_{rad}=2q^2\dddot{\vec{r}}/3c^3 $  ;
+      $\left\{\begin{array}{l}
+            \abs{\vec{F}}\gg\abs{\vec{F}_{rad}}\Rightarrow\ddot{vec{r}}\approx\frac{\vec{F}}{m},\,
+            \vec{F}_{rad}\approx\frac{2q^2}{3mc^3}\dot{\vec{F}}\\
+            \abs{\dot{\vec{F}}}\approx\omega\abs{\vec{F}}\Rightarrow\frac{2q^2\omega}{3mc^3}\ll 1
+      \end{array}\right.$ \\
+      $\left\{\begin{array}{l}
+            r_0=\frac{q^2}{mc^2}\\
+            \lambda=\frac{2\pi c}{\omega}
+      \end{array}\right.
+      \Rightarrow\lambda\gg r_0-\text{дальняя (волновая) зона} $
+\item $\left\{\begin{array}{l}
+            x'=\gamma(x-Vt)\\
+            y'=y\\z'=z\\
+            t'=\gamma(t-\frac{Vx}{c})
+      \end{array}\right.$
+\inlineitem $\left\{\begin{array}{l}
+            V_x'=(V_x-V)/(1-VV_x/c^2)\\
+            V_y'=V_y\sqrt{1-\beta^2}/(1-VV_x/c^2)\\
+            V_z'=V_z\sqrt{1-\beta^2}/(1-VV_x/c^2)
+      \end{array}\right.$
+\item $\vec{r'}=\begin{pmatrix}
+            \gamma & {-}\beta\gamma & 0 & 0 \\
+            {-}\beta\gamma & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1
+      \end{pmatrix}\vec{r}\;\;$  ;
+      $\left\{\begin{array}{l}
+            a'^0=\gamma(a^0-\beta a^1)\\
+            a'^1=\gamma(a^1-\beta a^0)\\
+            a'^2=a^2\\a'^3=a^3
+      \end{array}\right.$  \\
+      $\left\{\begin{array}{l}
+            \vec{r^i}=\{ct,\vec{r}\}\\
+            \vec{j^i}=\{c\rho,\vec{j} \}\\
+            \vec{k^i}=\{\frac{\omega}{c},\vec{k} \}\\
+            \vec{p^i}=\gamma m\{c,\vec{v} \}\\
+            \vec{v^i}=\gamma\{c,\vec{v} \}\\
+            \vec{w^i}=\d{\vec{v^i}}{\tau},\,d\tau=\sqrt{1-\beta^2}dt\\
+            \vec{A^i}=\{\varphi,\vec{A} \}
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            p_ip^i = \frac{\varepsilon^2}{c^2}-p^2=m^2c^2\\
+            j_ij^i = c^2\rho^2-\vec{j}^2\\
+            k_ik^i = \frac{\omega^2}{c^2}-\vec{k}^2\\
+            u_iu^i = c^2\\
+            r_ir^i = c^2t^2-\vec{r}^2
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \vec{E}'_\|=\vec{E}_\|\\
+            \vec{H}'_\|=\vec{H}_\|\\
+            \vec{E}'_\perp=\gamma(\vec{E}_\perp+\frac1{c}\vmult{V}{H})\\
+            \vec{H}'_\perp=\gamma(\vec{H}_\perp-\frac1{c}\vmult{V}{E})
+      \end{array}\right.$  ;
+      $F_{ik}=\begin{pmatrix}
+            0 & E_x & E_y & E_z \\
+            -E_x & 0 & -H_z & H_y \\
+            -E_y & H_z & 0 & -H_x \\
+            -E_z & -H_y & H_x & 0
+      \end{pmatrix}$  ;
+      $\left\{\begin{array}{l}
+            I_2=F_{ik}F^{ik}=2(E^2-H^2)\\
+            I_4=2(E^2-H^2)+4\scmult{E}{H}^2
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \varepsilon=\gamma mc^2\\
+            \vec{p}=\gamma m\vec{v}
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \vec{v}=\frac{\vec{p}c^2}{\varepsilon}=\frac{\vec{p}c}{\sqrt{m^2c^2+p^2}}\\
+            \varepsilon^2=m^2c^4+p^2c^2\\
+            mc^2=\sqrt{\varepsilon^2-p^2c^2}\\
+            m=\gamma\frac{\varepsilon}{c^2}\\
+            \vec{p}=\frac{\varepsilon\vec{v}}{c^2-v^2}
+      \end{array}\right.$
+\inlineitem $\mathscr{L}=-mc^2\sqrt{1-\beta^2}-e\varphi +\frac{e}{c}\scmult{V}{A} $
+\item $\left\{\begin{array}{l}
+            w = \frac1{8\pi}(E^2+H^2)-\text{плотность энергии}\\
+            \vec{\sigma}=\frac{c}{4\pi}\vmult{E}{H}-\text{пл-ть потока энергии}\\
+            \vec{g}=\frac1{4\pi c}\vmult{E}{H}=\frac{\vec{\sigma}}{c^2}-\text{пл-ть импульса}
+      \end{array}\right.$
+\item $\left\{\begin{array}{l}
+            \d{\varepsilon}{t}=e\scmult{E}{V}\\
+            \d{\vec{p}}{t}=e\vec{E}+\frac{e}{c}\vmult{V}{H}
+      \end{array}\right.$  ;
+      $\left\{\begin{array}{l}
+            \d{}{t}\pd{\mathscr{L}}{\dot{q}}-\pd{\mathscr{L}}{q}=0\\
+            \varepsilon=\sum p^iq^i - \mathscr{L}
+      \end{array}\right.$  ;
+      $mc\d{u^k}{\tau}=\frac{e}{c}F^{ki}u_i $
+\end{enumerate}
+\vfill\line(1,0){500}
+\end{document}

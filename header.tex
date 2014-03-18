@@ -8,6 +8,8 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{cmap}
+\usepackage{mathrsfs}
+\usepackage[inline]{enumitem}
 \setlength{\headheight}{15.2pt}
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
@@ -18,34 +20,59 @@
 \geometry{top=1cm}
 \geometry{bottom=2cm}
 
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+
 \DeclareMathOperator{\sinc}{sinc}
 \DeclareMathOperator{\const}{const}
 \DeclareMathOperator{\Tr}{Tr}   %trace
 \DeclareMathOperator{\Dim}{dim}   %trace
+
 %\DeclareMathOperator{\tg}{tg}
 
 \newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
 \newcommand{\norm}[1]{\lVert #1 \rVert} % for norm ||f||
 \newcommand{\qnorm}[1]{\lVert #1 \rVert ^2} % for norm quadrat ||f||^2
 \newcommand{\avg}[1]{\left< #1 \right>} % for average
-\let\underdot=\d % rename builtin command \d{} to \underdot{}
+
+\newcommand{\vmult}[2]{[\vec{#1}{\times}\vec{#2}]} % vector multiplication
+\newcommand{\scmult}[2]{(\vec{#1}{\cdot}\vec{#2})} % scalar multiplication
+
 \renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
 \newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} % for partial derivatives
 \newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} % for double partial derivatives
 \newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2} \right)_{#3}} % for thermodynamic partial derivatives
+
 \newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
 \newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
 \newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|\left. #2 \vphantom{#1} \right>} % for Dirac brackets
 \newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right| #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+
 \newcommand{\comml}[2]{\left[ \hat{#1}, #2 \right]} % [A,...]
 \newcommand{\commr}[2]{\left[ #1, \hat{#2} \right]} % [...,B]
 \newcommand{\comm}[2]{\left[ \hat{#1}, \hat{#2} \right]} % for commutator for only two operators like [A,B]
-\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
-\let\divsymb=\div % rename builtin command \div to \divsymb
-\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
-\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+
+\renewcommand{\div}[1]{\operatorname{div}\vec{#1}} % dirty hack for divergence
+\newcommand{\rot}[1]{\operatorname{rot}\vec{#1}}
+\newcommand{\grad}[1]{\operatorname{grad}\vec{#1}}
+
+\newcommand{\gradn}[1]{\vec{\nabla} #1} % for gradient
+\newcommand{\divn}[1]{\scalmult{\nabla}{#1}} % for divergence
+\newcommand{\rotn}[1]{\vecmult{\nabla}{#1}} % for curl
 
 \newcommand{\praiseme}[1]{\scalebox{.4}{ \textcircled{\scalebox{.5}{CC}} \textcircled{\scalebox{.5}{BY}} \textcircled{\scalebox{.5}{SA}} #1, \the\day.\the\month.\the\year}}
 
 \newcommand{\bbar}[1]{\bar{\bar{#1}}}
+
+\makeatletter
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}%
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+\fi}
+\makeatother
