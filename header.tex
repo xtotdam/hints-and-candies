@@ -8,8 +8,10 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{cmap}
+%\usepackage{times}
 \usepackage{mathrsfs}
 \usepackage[inline]{enumitem}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \setlength{\headheight}{15.2pt}
 \renewcommand{\headrulewidth}{0pt}
 \pagestyle{fancy}
@@ -26,9 +28,7 @@
 \DeclareMathOperator{\sinc}{sinc}
 \DeclareMathOperator{\const}{const}
 \DeclareMathOperator{\Tr}{Tr}   %trace
-\DeclareMathOperator{\Dim}{dim}   %trace
-
-%\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\Dim}{dim} %dimensions
 
 \newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
 \newcommand{\norm}[1]{\lVert #1 \rVert} % for norm ||f||
@@ -62,17 +62,19 @@
 \newcommand{\rotn}[1]{\vecmult{\nabla}{#1}} % for curl
 
 \newcommand{\praiseme}[1]{\scalebox{.4}{ \textcircled{\scalebox{.5}{CC}} \textcircled{\scalebox{.5}{BY}} \textcircled{\scalebox{.5}{SA}} #1, \the\day.\the\month.\the\year}}
+\newcommand{\tobewritten}[0]{\textcolor{red}{\textsc{To be written ASAP!}}}
 
 \newcommand{\bbar}[1]{\bar{\bar{#1}}}
 
 \makeatletter
-\newcommand{\inlineitem}[1][]{%
-\ifnum\enit@type=\tw@
-    {\descriptionlabel{#1}}
-  \hspace{\labelsep}%
-\else
-  \ifnum\enit@type=\z@
-       \refstepcounter{\@listctr}\fi
+\newcommand{\inlineitem}[1][]{
+    \ifnum\enit@type=\tw@
+        {\descriptionlabel{#1}}
+        \hspace{\labelsep}
+    \else
+        \ifnum\enit@type=\z@
+        \refstepcounter{\@listctr}\fi
     \quad\@itemlabel\hspace{\labelsep}%
-\fi}
+    \fi
+}
 \makeatother
