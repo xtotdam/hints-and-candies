@@ -1,3 +1,4 @@
+pdflatex OZ_optics.tex
 pdflatex quantum.tex
 pdflatex theorver.tex
 pdflatex template.tex

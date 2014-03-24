@@ -5,3 +5,5 @@
 *(busy)
 *.dvi
 *.url
+*.lnk
+clone_to_common.cmd
