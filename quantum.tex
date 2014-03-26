@@ -6,7 +6,7 @@
 \center{\bfseries Quantum mechanics}
 \line(1,0){500}
 \fontsize{12}{15}
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
 \item Скалярное произведение
 	\begin{enumerate}
 	      \item $\braket{\varphi}{\psi}$
@@ -16,9 +16,9 @@
       $\braket{\psi}{\varphi}=\int\psi^*\varphi dx;\;\braket{\psi}{\psi}=\int\psi^*\psi dx =\int\abs{\psi}^2=\qnorm{\psi}\geq 0$
 \item Коммутатор\\
       $\comm{A}{B}=\hat{A}\hat{B}-\hat{B}\hat{A}$
-      \begin{enumerate}
+      \begin{enumerate}[label=\textbf{\underline{\alph*.}}]
             \item $ \comm{A}{B}=-\comm{B}{A} $
-            \item $ \left[ \lambda\hat{A},\hat{B}\hat{C} \right] = \lambda\comm{A}{B} + \lambda\comm{A}{C} $
+            \inlineitem $ \left[ \lambda\hat{A},\hat{B}\hat{C} \right] = \lambda\comm{A}{B} + \lambda\comm{A}{C} $
       \end{enumerate}
       $\comm{x}{p}=i\hbar$
 \item $ \comml{A}{\hat{B}\hat{C}} = \hat{B}\comm{A}{C} + \comm{A}{B}\hat{C} $\\
@@ -61,16 +61,53 @@
       a_{22}\frac{\hat{E}-\hat{\sigma}_3}{2} +
       a_{12}\frac{\hat{\sigma}_1+i\hat{\sigma}_2}{2} +
       a_{21}\frac{\hat{\sigma}_1-i\hat{\sigma}_2}{2}$\\
-      \begin{enumerate}
+      \begin{enumerate}[label=\textbf{\underline{\alph*.}}]
             \item $\hat{\sigma}_i^\dagger = \hat{\sigma}_i$
-            \item $\hat{\sigma}_i^{-1} = \hat{\sigma}_i$
-            \item $\hat{\sigma}_i\hat{\sigma}_j=-\hat{\sigma}_j\hat{\sigma}_i,\,i\neq j $
+            \inlineitem $\hat{\sigma}_i^{-1} = \hat{\sigma}_i$
+            \inlineitem $\hat{\sigma}_i\hat{\sigma}_j=-\hat{\sigma}_j\hat{\sigma}_i,\,i\neq j $
             \item $\Tr{\hat{\sigma}_i} = 0 ;\; \Tr{\hat{E}} = \Dim{\hat{E}}$
-            \item $\hat{\sigma}_i\hat{\sigma}_j=\hat{E}\delta_{ij} + i\epsilon_{ijk}\hat{\sigma}_k$
+            \inlineitem $\hat{\sigma}_i\hat{\sigma}_j=\hat{E}\delta_{ij} + i\epsilon_{ijk}\hat{\sigma}_k$
       \end{enumerate}
 \item $(\vec{a}\hat{\vec{\sigma}})(\vec{b}\hat{\vec{\sigma}}) = \hat{E}(\vec{a},\vec{b}) + i((\vec{a}\times\vec{b}),\hat{\vec{\sigma}})$
 \item $ \abs{\vec{n}}=1;\; (\vec{n},\hat{\vec{\sigma}})^{2k} = \hat{E};\; (\vec{n},\hat{\vec{\sigma}})^{2k+1} = (\vec{n},\hat{\vec{\sigma}})$
 \item $ e^{i\varphi(\vec{n},\hat{\vec{\sigma}})} = \hat{E}\cos{\varphi}+(\vec{n},\hat{\vec{\sigma}})\sin{\varphi} $
+\item $\avg{\hat{A}}=\Tr{\hat{A}\hat{\rho}} $\\
+      \begin{enumerate}[label=\textbf{\underline{\alph*.}}]
+      \item $\Tr{\hat{\rho}}=1 $
+      \inlineitem $\hat{\rho}^\dagger=\hat{\rho} $
+      \inlineitem $\matrixel{f}{\hat{\rho}}{f}\ge0 $
+      \end{enumerate}
+\item $\hat{\rho}=\frac1{2}\hat{E}+\frac{r}{2}\scmult{\vec{n}}{\hat{\vec{\sigma}}} $
+\item $\left\{\begin{array}{l}
+            \hat{H}=\frac{\hat{p}^2}{2m}+\frac{m\omega^2}{2}\hat{x}^2\\
+            \hat{H}\ket{\psi}=E\ket{\psi}\\
+            \braket{\psi}{\psi}=1
+      \end{array}\right.$
+      $\left\{\begin{array}{l}
+            \hat{x}=\frac{q_0}{\sqrt{2}}(\hat{a}+\hat{a}^\dagger),\;\;q_0=\sqrt{\frac{\hbar}{m\omega}}\\
+            \hat{p}=\frac{p_0}{\sqrt{2}}(\hat{a}-\hat{a}^\dagger),\;\;p_0=\sqrt{\hbar m\omega}\\
+      \end{array}\right.\,\,q_0p_0=\hbar$\\
+      $\left\{\begin{array}{l}
+            \hat{a}=\frac1{\sqrt{2}}(\frac{\hat{x}}{q_0}+i\frac{\hat{p}}{p_0})\text{ - оператор уничтожения}\\
+            \hat{a}^\dagger=\frac1{\sqrt{2}}(\frac{\hat{x}}{q_0}-i\frac{\hat{p}}{p_0})\text{ - оператор рождения}\\
+      \end{array}\right.$\\
+      $\comm{a}{a^\dagger}=1 $
+\item $\hat{N}=\hat{a}^\dagger\hat{a};\;\;\hat{H}=\hbar\omega(\hat{N}+\frac1{2}) $\\
+      $\left\{\begin{array}{l}
+            \comm{N}{a}=-\hat{a}\\
+            \comm{N}{a^\dagger}=\hat{a}^\dagger
+      \end{array}\right.$
+\item $\ket{0}\text{ - вакуумный вектор};\;\;\hat{N}\ket{0}=0\ket{0}$\\
+      $\psi_0(x)=\frac1{4\sqrt{q_0^2\pi}}\cdot e^{-\frac{x^2}{2q_0^2}};\;\;
+      \ket{\psi_n}=\ket{n}=\frac{(\hat{a}^\dagger)^n\ket{0}}{\sqrt{n!}} $
+\item $\left\{\begin{array}{l}
+            \hat{N}\ket{n}=n\ket{n}\\
+            \braket{n}{n}=1
+      \end{array}\right.$
+      $\left\{\begin{array}{l}
+            \hat{a}^\dagger=\sqrt{n-1}\ket{n+1}\\
+            \hat{a}=\sqrt{n}\ket{n-1}
+      \end{array}\right.$
 \end{enumerate}
 \vfill\line(1,0){500}
 \end{document}
