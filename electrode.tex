@@ -200,5 +200,102 @@
       \end{array}\right.$  ;
       $mc\d{u^k}{\tau}=\frac{e}{c}F^{ki}u_i $
 \end{enumerate}
-\vfill\line(1,0){500}
+\newpage
+% \vfill\line(1,0){500}
+\section*{Электродинамика сплошных сред}
+\begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
+\item \textbf{Уравнения электростатики вещества}\\
+      $\left\{\begin{array}{l}
+            \div{D}=4\pi\rho(\vec{r})\\
+            \rot{E}=0
+      \end{array}\right.\;\;
+      \vec{E}=-\vec{\nabla}\varphi;\;
+      \Delta\varphi=-\frac{4\pi}{\varepsilon}\rho(\vec{r});\;
+      \vec{D}=\varepsilon\vec{E} $\\
+      Граничные условия: 2 диэлектрика\\
+      $\left\{\begin{array}{l}
+            E^I_\tau=E^{II}_\tau|_\Gamma\rightarrow
+            \pd{\varphi_I}{\tau}=\pd{\varphi_{II}}{\tau}|_\Gamma\xrightarrow{\int}
+            \varphi_I=\varphi_{II}|_\Gamma\\
+            D^I_n=D^{II}_n=4\pi\rho_\text{пов. своб.}
+      \end{array}\right.$\\
+      $\vec{n}$ направлена из среды с большим номером в среду с меньшим.\\
+      Граничные условия: диэлектрик + проводник\\
+      $\left\{\begin{array}{l}
+            E^I_\tau=E^{II}_\tau=0\\
+            \rho_\text{инд. пов. своб.}=\frac1{4\pi}(D^I_n-D^{II}_n)=\frac{D^I_n}{4\pi}
+      \end{array}\right. $\\
+      $Q=\oint\limits_S \rho_\text{пов.}dS;\;
+      dS_\text{ПСК}=R^2\int\limits_0^\pi\sin\theta d\theta\int\limits_0^{2\pi}d\varphi;\;
+      \vec{F}_q=q\vec{E}_\text{возмущения в точке заряда q}$\\
+      $\mathscr{E}_{int}=\mathscr{E}_\text{после}-\mathscr{E}_\text{до};\;
+      d\mathscr{E}_{int}=-dA=-\int\limits_\infty^a F_z(z)dz\;\;$  \NB   $\;a\rightarrow z$
+\item \textbf{Потенциалы и ёмкости}\\
+      $c = \abs{\frac{q}{\varphi_1-\varphi_2}}$\\
+      $\Delta\varphi = -4\pi\kappa\delta(y-b)\delta(x-a) \Rightarrow
+      \varphi = -2\kappa \ln \sqrt{(x-a)^2+(y-b)^2}$\\
+      Теорема взаимности: $\sum\limits_{a=1}^N q_a \varphi'_a = \sum\limits_{a=1}^N q'_a \varphi_a$
+\item \textbf{Краевые задачи электростатики}\\
+      $\Delta\varphi = 0$
+      \begin{enumerate}
+      \item СфСК\\
+            $\left\{\begin{array}{l}
+                  x = r\sin\theta\cos\varphi\\
+                  y = r\sin\theta\sin\varphi\\
+                  z = r\cos\theta
+            \end{array}\right.\;\;$
+            $\varphi = \left(\begin{array}{c}r^l\\\frac1{r^{l+1}}\end{array}\right)
+            P^m_l(\cos\theta)\left\{\begin{array}{l}\sin m\varphi\\\cos m\varphi\end{array}\right.$\\
+            $\begin{array}{c}\\\\P_n^m(\cos\theta)\\m=\overline{0,3}\\n=\overline{0,3}\end{array} =
+            \begin{pmatrix}
+                  1 & 0 & 0 & 0 & \cdots\\
+                  \cos \theta & -\sin \theta & 0 & 0 & \cdots\\
+                  \frac{1}{4} (3 \cos 2 \theta +1) & -3\sin \theta \cos \theta & 3 \sin ^2\theta & 0 & \cdots\\
+                  \frac{1}{8} (3 \cos \theta+5 \cos 3 \theta ) &
+                  -\frac{3}{2} \sin \theta \left(5 \cos ^2\theta-1\right) &
+                  15 \sin ^2\theta \cos \theta &
+                  -15 \sin ^3\theta & \cdots\\
+                  \vdots & \vdots & \vdots & \vdots & \ddots
+            \end{pmatrix} $
+      \item ЦСК\\
+            $\left\{\begin{array}{l}
+                  x = r\cos\varphi\\
+                  y = r\sin\varphi\\
+                  z = z
+            \end{array}\right. \;\;$
+            $\varphi = \left(\begin{array}{c}r^n\\\frac1{r^n}\end{array}\right)
+            \left(\begin{array}{l}\sin n\varphi\\\cos n\varphi\end{array}\right)\ln r$
+      \end{enumerate}
+      $\vec{f}_\text{ед. площ.}=\frac{\varepsilon E^2}{8 \pi}\vec{n};\;
+      \vec{F}=\oint\limits_S\vec{f}dS$
+\item \textbf{Электростатика диэлектриков}\\
+      $\Delta\varphi = -\frac{4\pi}{\varepsilon}\rho $\\
+      $\left\{\begin{array}{l}
+            E^I_\tau=E^{II}_\tau|_\Gamma\rightarrow\varphi_I=\varphi_{II}|_\Gamma\\
+            D^I_n=D^{II}_n=4\pi\rho_\text{пов. своб.}
+      \end{array}\right. $\\
+      $\vec{P}=\frac{\varepsilon -1}{4\pi}\vec{E};\;\;$ граница диэлектрика = плохое зеркало
+\item \textbf{Силы, действующие на диэлектрик во внешнем поле}\\
+      $\vec{F}_\text{ед. объёма}=\rho\vec{E}-\frac{E^2}{8\pi}\vec{\nabla}\varepsilon+
+      \vec{\nabla}(\frac{E^2}{8\pi}\pd{\varepsilon}{\tau}\tau);\;\;
+      \tau = \lim\limits_{\Delta V\rightarrow 0}\frac{\Delta m}{\Delta V}\text{ - плотность}$\\
+      $\mathscr{F}_\text{тело из пров-ка}=\oint\limits_S \vec{f}_1 dS;\;
+      \vec{f}_1=\frac{\varepsilon E^2}{8\pi}\vec{n}$\\
+      $\mathscr{F}_\text{тело из диэл-ка}=\oint\limits_S \vec{f}_2 dS;\;
+      \vec{f}_2=\frac{\varepsilon\scmult{E}{n}\vec{E}}{4\pi} -\frac{\varepsilon E^2}{8\pi}\vec{n}$
+\item \textbf{Стационарные токи в проводниках}\\
+      $\rot{H}=\frac{4\pi}{c}\vec{j}\Rightarrow
+      \operatorname{div}\rot{H}=0=\frac{4\pi}{c}\div{j}\Rightarrow
+      \div{j}=0 \Rightarrow$\\
+      $\left\{\begin{array}{l}
+            \div{B}=0 \Rightarrow \oint\limits_S \scmult{B}{dS}=0 \Rightarrow B^I_n=B^{II}_n\\
+            \div{j}=0 \Rightarrow \oint\limits_S \scmult{j}{dS}=0 \Rightarrow j^I_n=j^{II}_n
+      \end{array}\right. $\\
+      $\vec{j}=\sigma(\vec{E}+\vec{E}_\text{стор.})$\\
+      Принимаем $\vec{E}_\text{стор.} = 0 \Rightarrow \vec{E}=\frac{\vec{j}}{\sigma} \Rightarrow$
+      $\left\{\begin{array}{l}
+            E^I_\tau=E^{II}_\tau\\
+            \frac{j^I_\tau}{\sigma_1}=\frac{j^{II}_\tau}{\sigma_2}
+      \end{array}\right. $
+\end{enumerate}
 \end{document}
