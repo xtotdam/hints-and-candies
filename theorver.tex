@@ -7,76 +7,96 @@
 \line(1,0){500}
 \fontsize{12}{15}
 \begin{enumerate}
-\item Правило произведения
-\item Перестановки $ P_n = n! $
-\item Размещения $ A^k_n = \frac{n!}{(n-k)!} $
-\item Сочетания $ C^k_n = \frac{n!}{k!(n-k)!} $
-\item Гипергеометрическое распределение: M из N всего объектов выделены. P(A:\{m выдел. среди n вытянутых\}):\\
+\item \begin{enumerate}
+      \item Правило произведения
+      \item Перестановки $ P_n = n! $
+      \item Размещения $ A^k_n = \frac{n!}{(n-k)!} $
+      \item Сочетания $ C^k_n = \frac{n!}{k!(n-k)!} $
+      \item Гипергеометрическое распределение: M из N всего объектов выделены. P(A:\{m выдел. среди n вытянутых\}):\\
       $ P(A)=\frac{C^m_M C^{n-m}_{N-M}}{C^n_N} $
-\item Из N частиц: ${n_1,n_2,...,n_k}$ - k типов. Выбирается m, A:\{${m_1,m_2,...,m_k}$\}.\\
+      \item Из N частиц: ${n_1,n_2,...,n_k}$ - k типов. Выбирается m, A:\{${m_1,m_2,...,m_k}$\}.\\
       $ P(A)=\frac{\prod\limits_k C^{m_k}_{n_k}}{C^m_N} $
-\item Формула разбиения множества на группы: l различных групп n элементов всего:
+      \item Формула разбиения множества на группы: l различных групп n элементов всего:
       $ \left\{ \begin{smallmatrix}
       n_1 \rightarrow 1\, gr. \\n_2 \rightarrow 2\, gr. \\...\\n_l\rightarrow l\, gr.
       \end{smallmatrix} \right\} $\\
       $ P=\frac{k}{n} \Leftarrow k=\frac{n!}{\prod\limits_k n_k!} $
-\end{enumerate}
-\line(1,0){500}
-\begin{enumerate}
-\item $A \subset B$ - А влечёт В, A - подмножество В
-\item $A\subset B,\,B\subset A \Rightarrow A=B$
-\item $\bar{A}$ - противоположное событие
-\item $\varnothing$ - невозможное событие
-\item $\bar{\varnothing}=\Omega$
-\item $A\cap B = A\cdot B$ - пересечение = ``и''
-\item $A\cap B = \varnothing$ - несовместные
-\item $A\cup B$ - объединение = ``или''
-\item $A\cap B=\varnothing \Rightarrow A\cup B = A+B$
-\item $A\backslash B = A\cap\bar{B}$ - только А без В
-\item $A \circ B = A\triangle B = (A\cup B)\backslash(A\cap B) =(A\backslash B)\cup(B\backslash A)=(A\cup B)\cap\overline{(A\cap B)} $ - симметрическая разность
-\item $\left\{\begin{array}{l}A\cap A=A\\ A\cup A=A\end{array}\right.$;
+      \end{enumerate}
+\item \begin{enumerate}
+      \item $A \subset B$ - А влечёт В, A - подмножество В
+      \item $A\subset B,\,B\subset A \Rightarrow A=B$
+      \item $\bar{A}$ - противоположное событие
+      \item $\varnothing$ - невозможное событие
+      \item $\bar{\varnothing}=\Omega$
+      \item $A\cap B = A\cdot B$ - пересечение = ``и''
+      \item $A\cap B = \varnothing$ - несовместные
+      \item $A\cup B$ - объединение = ``или''
+      \item $A\cap B=\varnothing \Rightarrow A\cup B = A+B$
+      \item $A\backslash B = A\cap\bar{B}$ - только А без В
+      \item $A \circ B = A\triangle B = (A\cup B)\backslash(A\cap B) =(A\backslash B)\cup(B\backslash A)=(A\cup B)\cap\overline{(A\cap B)} $ - симметрическая разность
+      \item $\left\{\begin{array}{l}A\cap A=A\\ A\cup A=A\end{array}\right.$;
       $\left\{\begin{array}{l}A\cap \Omega=A\\ A\cup \Omega=\Omega\end{array}\right.$;
       $\left\{\begin{array}{l}A\cap \varnothing=\varnothing\\ A\cup \varnothing=A\end{array}\right.$;
       $ \Omega\backslash A=\bar{A} $
-\item $\left\{\begin{array}{l} A\cup B = B\cup A\\A\cap B = B\cap A\end{array}\right.$;
+      \item $\left\{\begin{array}{l} A\cup B = B\cup A\\A\cap B = B\cap A\end{array}\right.$;
       $\left\{\begin{array}{l} A\cup(B\cup C)=(A\cup B)\cup C \\ A\cap(B\cap C)=(A\cap B)\cap C \end{array}\right.$;
       $\left\{\begin{array}{l} A\cup(B\cap C)=(A\cup B)\cap(A\cup C)\\A\cap(B\cup C)=(A\cap B)\cup(A\cap C)\end{array}\right.$
-\item $\left\{\begin{array}{l} \overline{A\cup B}=\bar{A}\cap\bar{B}\\\overline{A\cap B}=\bar{A}\cup\bar{B}\end{array}\right.$ - законы де Моргана
-\item $A\subset B\Rightarrow\bar{B}\subset\bar{A}=\bar{A}\supset\bar{B}$
-\end{enumerate}
-\newpage
-\begin{enumerate}
-\item $P(A)\in [0,1]$
-\item $\left\{\begin{array}{l} P(\varnothing)=0\\P(\Omega)=1 \end{array}\right.$; $ P(\bar{A})=1-P(A) $
-\item $A\cap B=\varnothing \Rightarrow P(A\cup B)=P(A)+P(B)$
-\item $A\subset B\Rightarrow P(A\backslash B)=P(A)-P(B)$
-\item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
-\item $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$
-\end{enumerate}
-\line(1,0){500}
-\begin{enumerate}
-\item Класс $\mathfrak{F}$ - алгебра событий, если
-      \begin{enumerate}
-      \item A $\in \mathfrak{F} \Rightarrow \bar{A} \in \mathfrak{F}$
-      \item A $\in \mathfrak{F},\, B \in \mathfrak{F} \Rightarrow A\cup B\in \mathfrak{F}$
+      \item $\left\{\begin{array}{l} \overline{A\cup B}=\bar{A}\cap\bar{B}\\\overline{A\cap B}=\bar{A}\cup\bar{B}\end{array}\right.$ - законы де Моргана
+      \item $A\subset B\Rightarrow\bar{B}\subset\bar{A}=\bar{A}\supset\bar{B}$
       \end{enumerate}
-\item $\sigma$-алгебра:
-      \begin{enumerate}
-      \item является алгеброй
-      \item $A_1,A_2,...,A_n \in \mathfrak{F} \Rightarrow \bigcup\limits_{i=1}^\infty A_i \in \mathfrak{F}$
+\item \begin{enumerate}
+      \item $P(A)\in [0,1]$
+      \item $\left\{\begin{array}{l} P(\varnothing)=0\\P(\Omega)=1 \end{array}\right.$; $ P(\bar{A})=1-P(A) $
+      \item $A\cap B=\varnothing \Rightarrow P(A\cup B)=P(A)+P(B)$
+      \item $A\subset B\Rightarrow P(A\backslash B)=P(A)-P(B)$
+      \item $P(A\cup B)=P(A)+P(B)-P(A\cap B)$
+      \item $P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C)$
       \end{enumerate}
-\end{enumerate}
-\line(1,0){500}
-\begin{enumerate}
+\item \begin{enumerate}
+      \item Класс $\mathfrak{F}$ - алгебра событий, если
+            \begin{enumerate}
+            \item A $\in \mathfrak{F} \Rightarrow \bar{A} \in \mathfrak{F}$
+            \item A $\in \mathfrak{F},\, B \in \mathfrak{F} \Rightarrow A\cup B\in \mathfrak{F}$
+            \end{enumerate}
+      \item $\sigma$-алгебра:
+            \begin{enumerate}
+            \item является алгеброй
+            \item $A_1,A_2,...,A_n \in \mathfrak{F} \Rightarrow \bigcup\limits_{i=1}^\infty A_i \in \mathfrak{F}$
+            \end{enumerate}
+      \end{enumerate}
 \item $ P(A) = \frac{l_{\alpha\beta}}{l_{ab}};\;P(A)=\frac{S_A}{S_B};\; P(A) = \frac{V_A}{V_B} $\\
-\end{enumerate}
-\line(1,0){500}
-\begin{enumerate}
-\item $P(A|B)=\frac{P(A\cap B)}{P(B)},\,P(B)\neq 0$ - ``А при условии В''
-\item $\left\{\begin{array}{l}
+\item \begin{enumerate}
+      \item $P(A|B)=\frac{P(A\cap B)}{P(B)},\,P(B)\neq 0$ - ``А при условии В''
+      \item $\left\{\begin{array}{l}
             P(A|B)=P(A),\,P(B)\neq 0\\
             P(B|A)=P(B),\,P(A)\neq 0
-      \end{array}\right. $ - $ \mathfrak{Def.}$ независимые события
+            \end{array}\right. $ - $ \mathfrak{Def.}$ независимые события
+      \end{enumerate}
+\item Схема Бернулли\\
+      $\Omega = (\omega_1\equiv\text{успех},\omega_2\equiv\text{неудача});\;
+      P(\omega_1)=p,\, P(\omega_2)=q=1-p $\\
+      \begin{enumerate}
+      \item $P_n(k)=C^k_n p^k q^{n-k} $ - биномиальное распределение. ``$k$ успехов за $n$ попыток''
+      \item $P(n,n{+}k)=C^{n-1}_{n+k-1}p^n q^k $ - распределение Паскаля. ``для $n$ успехов надо $n{+}k$ попыток''
+      \item $P(k)=q^{k-1}\cdot p $ - геометрическое распределение. ``$k$ испытаний для 1 успеха''
+      \end{enumerate}
+      $P_n(k_\text{наив.})=\max\limits_kP_n(k);\;k_\text{наив.}\approx np \in [np-q,np{+}p] $\\
+      $P_n(k)=C^k_n p^k q^{n-k} \xrightarrow[n\rightarrow\infty,\,p\rightarrow 0,\,\lambda=np\rightarrow\const]{} \frac{ \lambda^k }{ k! } e^{ -\lambda };\;\left\{\begin{array}{l}np\in(0,10)\\n\ge 100\\np^2\ll 1\end{array}\right.  $
+\item Локальная и интегральная теоремы Муавра-Лапласа\\
+      $P_n(m),\;p,q=1-p,\,n\ge 100,npq \ge 10 $\\
+      $P_n(m)\approx \frac1{\sqrt{npq}}\cdot \underbrace{\frac1{\sqrt{2\pi}}e^{-\frac{x^2}{2}}}_{\text{норм. распр-е } p(x)},\,x=\frac{m-np}{\sqrt{npq}},\,p(x)=p(-x) $\\
+      $P_n(a<m<b)\approx \Phi(\frac{b-np}{\sqrt{npq}})-\Phi(\frac{a-np}{\sqrt{npq}});\;
+      \Phi(x)=\int\limits_{-\infty}^x e^{-\frac{t^2}{2}}dt,\,\Phi(x)=1-\Phi(-x) $
+\item Случайные величины. Функции распределения\\
+      $\xi(\omega)\text{ - случайная величина, такая, что} \{\omega:\xi(\omega)<x\}\in\mathfrak{F}\, \forall x \in \mathbb{R} $\\
+      $P(\xi(\omega)<x)=P(\xi<x)=F_\xi(x)=F(x)\text{ - функция распределения} $\\
+      Свойства функции распределения
+      \begin{enumerate}
+      \item $F(x)\in [0,1] $
+      \item $F(-\infty)=0,\,F(\infty)=1 $
+      \item Если $x_1<x_2 : F(x_1)\le F(x_2)$
+      \item $F(x-0)=F(x),\text{но }F(x+0)-F(x)=P(x) $
+      \end{enumerate}
 \end{enumerate}
 \vfill\line(1,0){500}
 \end{document}
