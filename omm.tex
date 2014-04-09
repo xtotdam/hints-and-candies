@@ -42,7 +42,7 @@
 \item \textbf{Как ставится простейшая задача Гурса?}\\
       $\left\{\begin{array}{l}
             u_{xy}=f(x,y),\,x>0,\,y>0\;\;(1)\\
-            u(x,0)=\varphi(x),\,u(0,y)=\varphi(y)\\
+            u(x,0)=\varphi_1(x),\,u(0,y)=\varphi_2(y)\\
             u(0,0)=\varphi_1(0)=\varphi_2(0)
       \end{array}\right. $\\$\Rightarrow
       u(x,y)=\varphi_1(x)+\varphi_2(y)-u(0,0)+ \int\limits_0^y \int\limits_0^x f(\xi,\eta)d\xi d\eta $\\
@@ -50,7 +50,7 @@
 \item \textbf{Как ставится общая задача Гурса?}\\
       $\left\{\begin{array}{l}
             u_{xy}+a(x,y)u_x+b(x,y)u_y+c(x,y)u=f(x,y),\,x>0,\,y>0\\
-            u(x,0)=\varphi(x),\,u(0,y)=\varphi(y)\\
+            u(x,0)=\varphi_1(x),\,u(0,y)=\varphi_2(y)\\
             u(0,0)=\varphi_1(0)=\varphi_2(0)
       \end{array}\right. $\\$\Rightarrow
       u(x,y)=\underbrace{\int\limits_0^y \int\limits_0^x F(\xi,\eta)d\xi d\eta}_{A\left[u\right]} + \Phi(x,y);
@@ -112,7 +112,7 @@
       \end{array}\right.$
 \item \textbf{Как ставится задача Стефана?}\\
       $\left\{\begin{array}{l}
-            \pd{u_1}{t}=a_1^2\pdd{u_1}{x},\,0<x,\xi\\
+            \pd{u_1}{t}=a_1^2\pdd{u_1}{x},\,0<x<\xi\\
             \pd{u_2}{t}=a_2^2\pdd{u_2}{x},\,\xi<x<\infty
       \end{array}\right.$\\
       $\left\{\begin{array}{l}
@@ -190,7 +190,7 @@
 \item \textbf{Что такое автомодельное решение?}\\
       Автомодельными решениями квазилинейного уравнения теплопроводности мы будем называть такие его частные решения специального вида, которые могут быть получены путем интегрирования некоторых обыкновенных дифференциальных уравнений, аргументы искомых функций которых представляют собой комбинацию независимых переменных $x$ и $t$.
 \item \textbf{Дайте определение квазилинейного уравнения теплопроводности.}\\
-	$c\rho\pd{u}{t}=\pd{u}{x}(k(u)\pd{u}{x}$
+	$c\rho\pd{u}{t}=\pd{u}{x}\left(k(u)\pd{u}{x}\right)$
 \item \textbf{Сформулируйте основные свойства квазилинейного уравнения теплопроводности.}\\
       \tobewritten
 \item \textbf{Что такое тепловые волны? При каких условиях они возникают?}\\
