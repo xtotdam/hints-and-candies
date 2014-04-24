@@ -7,9 +7,8 @@
 \line(1,0){500}
 \fontsize{12}{15}
 \begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
-\item Скалярное произведение
+\item Скалярное произведение $\braket{\varphi}{\psi}$
 	\begin{enumerate}
-	      \item $\braket{\varphi}{\psi}$
             \item $\bra{\varphi}(\alpha_1\ket{\psi_1}+\alpha_2\ket{\psi_2})=\alpha_1\braket{\varphi}{\psi_1}+\alpha_2\braket{\varphi}{\psi_2}$
             \item $\braket{\psi}{\psi}\geq 0$
 	\end{enumerate}
@@ -49,7 +48,8 @@
       $\left\{\begin{array}{l}
             \comm{l_i}{x_j}=i\epsilon_{ijk}\hat{x}_k\\
             \comm{l_i}{p_j}=i\epsilon_{ijk}\hat{p}_k\\
-            \comm{l_i}{l_j}=i\epsilon_{ijk}\hat{l}_k
+            \comm{l_i}{l_j}=i\epsilon_{ijk}\hat{l}_k\\
+            \comm{l^2}{l_i}=0
       \end{array}\right.$
 \item Матрицы Паули\\
       $\hat{\sigma}_1=\begin{pmatrix} 0&1\\1&0 \end{pmatrix};\;
@@ -77,7 +77,7 @@
       \inlineitem $\hat{\rho}^\dagger=\hat{\rho} $
       \inlineitem $\matrixel{f}{\hat{\rho}}{f}\ge0 $
       \end{enumerate}
-\item $\hat{\rho}=\frac1{2}\hat{E}+\frac{r}{2}\scmult{\vec{n}}{\hat{\vec{\sigma}}} $
+\item $\hat{\rho}=\frac1{2}\hat{E}+\frac{r}{2}(\vec{n}\cdot\hat{\vec{\sigma}}) $
 \item $\left\{\begin{array}{l}
             \hat{H}=\frac{\hat{p}^2}{2m}+\frac{m\omega^2}{2}\hat{x}^2\\
             \hat{H}\ket{\psi}=E\ket{\psi}\\
@@ -92,7 +92,7 @@
             \hat{a}^\dagger=\frac1{\sqrt{2}}(\frac{\hat{x}}{q_0}-i\frac{\hat{p}}{p_0})\text{ - оператор рождения}\\
       \end{array}\right.$\\
       $\comm{a}{a^\dagger}=1 $
-\item $\hat{N}=\hat{a}^\dagger\hat{a};\;\;\hat{H}=\hbar\omega(\hat{N}+\frac1{2}) $\\
+\item $\hat{N}=\hat{a}^\dagger\hat{a};\;\;\hat{H}=\hbar\omega(\hat{N}+\frac1{2});\;\;E_n=\hbar\omega(n+\frac1{2}) $\\
       $\left\{\begin{array}{l}
             \comm{N}{a}=-\hat{a}\\
             \comm{N}{a^\dagger}=\hat{a}^\dagger
@@ -105,9 +105,10 @@
             \braket{n}{n}=1
       \end{array}\right.$
       $\left\{\begin{array}{l}
-            \hat{a}^\dagger=\sqrt{n-1}\ket{n+1}\\
+            \hat{a}^\dagger=\sqrt{n+1}\ket{n+1}\\
             \hat{a}=\sqrt{n}\ket{n-1}
       \end{array}\right.$
+      $\quad\braket{n}{m}=\delta_{nm} $
 \item Когерентные состояния\\
       $\left\{\begin{array}{l}
             \hat{a}\ket{\alpha}=\alpha\ket{\alpha}\\
@@ -115,6 +116,37 @@
       \end{array}\right. $\\
       $\ket{\alpha}=\ket{\psi_\alpha}=\sum\limits_{n=0}^\infty\psi_n\ket{n}=
       \sum\limits_{n=0}^\infty\frac{\alpha^n}{\sqrt{n!}}\ket{n}\cdot e^{-\frac{\abs{\alpha}^2}{2}} $
+\item Потенциальные ямы\\
+      $-\frac{\hbar^2}{2m}\dd{\psi}{x}+V(x)\psi(x)=E\psi(x);\;\;E_n=-\frac{\hbar^2 k^2}{2m}$\\[.2cm]
+      $\delta \Rightarrow \frac{\psi_{II}'(a)}{\psi_{II}(a)}-\frac{\psi_{I}'(a)}{\psi_{I}(a)}=\frac{2mU_0}{\hbar^2} $
+\item Момент количества движения\\
+      $\left\{\begin{array}{l}
+            \hat{\vec{l^2}}\ket{lm}=l(l+1)\ket{lm}\\[.2cm]
+            \hat{l_z}\ket{lm}=m\ket{lm}
+      \end{array}\right. $
+      $\quad \hat{A} - \text{скаляр, если} \comm{l_i}{A}=0 $\\
+      $\left\{\begin{array}{l}
+            \hat{l_{+}}=\hat{l_x}{+}i\hat{l_y}\\
+            \hat{l_-}=\hat{l_x}-i\hat{l_y}
+      \end{array}\right. $;
+      $\left\{\begin{array}{l}
+            l_{+}\ket{lm}=\ket{l,m+1}\sqrt{(l-m)(l+m+1)}\\
+            l_{-}\ket{lm}=\ket{l,m-1}\sqrt{(l+m)(l-m+1)}
+      \end{array}\right. $\\[.2cm]
+      $\matrixel{l,m+1}{\hat{A}}{l,m+1}=\matrixel{lm}{\hat{A}}{lm}=\delta_{ll'}\delta_{mm'}a(l) $
+\item Представление Шредингера\\
+      $\left\{\begin{array}{l}
+            i\hbar\d{}{t}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}\\
+            \ket{\psi(0)}=\ket{\psi_0}
+      \end{array}\right. $\\[.2cm]
+      $\hat{H}\ket{\psi_n}=\varepsilon_n\ket{\psi_n}\Rightarrow
+      i\hbar\d{}{t}\ket{\psi_n(t)}=\varepsilon_n\ket{\psi_n(t)}\Rightarrow
+      \ket{\psi_n(t)}=e^{-\frac{i\varepsilon_n t}{\hbar}}\ket{\psi_n}$\\
+      $\ket{\psi(0)}=\ket{n}\Rightarrow
+      \hat{H}\ket{\psi(t)}=\underbrace{\hbar\omega(n+\frac1{2})}_{\varepsilon_n}\ket{n}\Rightarrow
+      \ket{\psi(t)}=e^{-i\omega(n+\frac1{2}) t}\ket{n}$
+\item Представление Гейзенберга\\
+      $\d{\hat{A}(t)}{t}=\frac{i}{\hbar}\comm{H}{A(t)}$
 \end{enumerate}
 \vfill\line(1,0){500}
 \end{document}
