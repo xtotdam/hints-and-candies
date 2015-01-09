@@ -1,6 +1,6 @@
 \input{header.tex}
 \begin{document}
-\rfoot{\praiseme{Xtotdam}}
+\rfoot{\praiseme{Xtotdam, Fedor B.}}
 
 \fontsize{20}{24}
 \center{\bfseries Квантовая теория - теоретический минимум}
@@ -97,6 +97,7 @@
             $ (\v{a}\hat{\vec{\sigma}})(\v{b}\hat{\vec{\sigma}}) = \hat{E}(\v{a},\v{b}) + i([\v{a}\times\v{b}],\hat{\vec{\sigma}}) $
         \end{itemize}
 \end{enumerate}
+\vfill\line(1,0){500}
 
 \begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
 \item Стационарная теория возмущений  \begin{itemize}
@@ -117,7 +118,7 @@
             $ md^2\bar{V} \ll \hbar^2;\; \bar{V} = \frac1{2\pi d^2} \abs{\int \frac1{\v{r}}V(\v{r})d\v{r}};\; kd \ll 1 $ -- малые энергии \\
             $ md^2\tilde{V} \ll \hbar^2;\; \tilde{V} = \frac1{d} \abs{\int V(\v{r})d\v{r}};\; kd \gg 1 $ -- высокие энергии \\
             \item Условие унитарности для парциальных амплитуд рассеяния: \\
-            $ \Im{f_l} = k \abs{f_l}^2 $
+            $ \mathfrak{Im}{f_l} = k \abs{f_l}^2 $
             \item Выражение для парциальной амплитуды рассеяния через фазу рассеяния: \\
             $ f_l = \frac1{2ik}(2l+1)(e^{2i\delta_l} - 1) $
             \item Асимптотика для решения радиального уравнения Шредингера в задаче рассеяния: \\
@@ -136,7 +137,7 @@
             $ \psi=e^{iH_0t}\varphi;\; i\d{\psi}{t}=(\hat{H}_0+\hat{H}_I)\psi \Rightarrow i\d{\varphi}{t}=e^{iH_0t}\hat{H}_I e^{iH_0t}\varphi $
             \item Золотое правило Ферми: \\
             $ P_{fi} = \frac{2\pi}{\hbar}\abs{\matrixel{\psi_f}{\hat{V}}{\psi_i}}^2\rho(E_f) $ -- постоянное возмущение\\
-            $ P_{fi} = \frac{2\pi}{\hbar}\abs{\matrixel{\psi_f}{\hat{\Omega}_\pm}{\psi_i}}^2\delta(E_f-E_i\pm \hbar\omega) $ -- периодическое возмущение $ \hat{V}_\pm=\hat{\Omega}_\pm e^{\pm i\omega t} $
+            $ P_{fi} = \frac{2\pi}{\hbar}\abs{\matrixel{\psi_f}{\hat{\Omega}_\pm}{\psi_i}}^2\delta(E_f-E_i\mp \hbar\omega) $ -- периодическое возмущение $ \hat{V}_\pm=\hat{\Omega}_\pm e^{\pm i\omega t} $
 
         \end{itemize}
 \item Вторичное квантование.  \begin{itemize}
@@ -156,9 +157,9 @@
             $ \hat{H} = \sum_{\v{k},p}\hbar\omega_\v{k}\ \hat{a}^\dagger_{\v{k},p}\ \hat{a}_{\v{k},p} $\\
             $ \hat{\v{p}} = \sum_{\v{k},p}\hbar\v{k}\ \hat{a}^\dagger_{\v{k},p}\ \hat{a}_{\v{k},p} $\\
             \item Оператор вектор-потенциала: \\
-            $ \hat{\v{A}}_\Gamma(\v{x},t) = \sum_{\v{k},p}\sqrt{\frac{2\pi\hbar c^2}{\omega_\v{k}L^3}}\cdot e_{\v{k},p}(\hat{a}_{\v{k},p}\cdot e^{i\v{k}\v{x}-i\omega_\v{k}t}+\hat{a}^\dagger_{\v{k},p}\cdot e^{i\v{k}\v{x}-i\omega_\v{k}t}) $
+            $ \hat{\v{A}}_\Gamma(\v{r},t) = \sum_{\v{k},p}\sqrt{\frac{2\pi\hbar c^2}{\omega_\v{k}L^3}}\cdot e_{\v{k},p}(\hat{a}_{\v{k},p}\cdot e^{i\v{k}\v{r}-i\omega_\v{k}t}+\hat{a}^\dagger_{\v{k},p}\cdot e^{-i\v{k}\v{r}+i\omega_\v{k}t}) $
             \item Формула для электрического дипольного излучения: \\
-            $ \d{I_p}{\Omega_\v{k}} = \frac{e^2 \omega_\v{k}^4}{2\pi c^3} \abs{\matrixel{\psi_2}{\hat{\v{x}}}{\psi_1}}^2;\; I = \sum_p \int d\Omega_\v{k}\d{I_p}{\Omega_\v{k}} = \frac{\hbar\omega}{\tau} $
+            $ \d{I_p}{\Omega_\v{k}} = \frac{e^2 \omega_\v{k}^4}{2\pi c^3} \abs{ \v{e}_{\v{k},p}\matrixel{\psi_2}{\hat{\v{x}}}{\psi_1}}^2;\; I = \sum_p \int d\Omega_\v{k}\d{I_p}{\Omega_\v{k}} = \frac{\hbar\omega}{\tau} $
 
         \end{itemize}
 \item Уравнение Дирака  \begin{itemize}
