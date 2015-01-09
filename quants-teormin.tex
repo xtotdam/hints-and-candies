@@ -1,0 +1,180 @@
+\input{header.tex}
+\begin{document}
+\rfoot{\praiseme{Xtotdam}}
+
+\fontsize{20}{24}
+\center{\bfseries Квантовая теория - теоретический минимум}
+\line(1,0){500}
+\fontsize{12}{15}
+\begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
+\item Матрица плотности  \begin{itemize}
+            \item условие нормировки для матрицы плотности $\hat{\rho}$:
+            $ \text{Tr}\hat{\rho} = 1 $
+            \item среднее значение наблюдаемой $\avg{\hat{A}}$, если система находится в состоянии с матрицей плотности $\hat{\rho}$:
+            $ \avg{\hat{A}}_\rho = \text{Tr}\hat{A}\hat{\rho} $
+            \item вероятность пребывания в чистом состоянии $\ket{\psi}$, если система находится в состоянии с матрицей плотности $\hat{\rho}$:
+            $ P_{\ket{\psi}} = \matrixel{\psi}{\hat{\rho}}{\psi} $
+            \item необходимое и достаточное условие чистоты состояния, если система находится в состоянии с матрицей плотности $\hat{\rho}$:
+            $ \hat{\rho}^2 = \hat{\rho}$ \\
+            cвязь между $\hat{\rho}$ и волновой функцией $\ket{\psi}$ в этом случае:
+            $ \hat{\rho} = \ket{\psi}\bra{\psi} $
+        \end{itemize}
+\item Волновая функция  \begin{itemize}
+            \item условие нормировки волновой функции $\ket{\psi}$:
+            $ \braket{\psi}{\psi}=1 $
+            \item среднее значение наблюдаемой $\avg{\hat{A}}$, если система находится в состоянии с волновой функцией $\ket{\psi}$:
+            $ \avg{\hat{A}}_{\ket{\psi}} = \matrixel{\psi}{\hat{A}}{\psi} $
+            \item вероятность пребывания в чистом состоянии $\ket{\xi}$, если система находится в состоянии с волновой функцией $\ket{\psi}$:
+            $ P_{\ket{\xi}} = \abs{\braket{\xi}{\psi}}^2 $
+        \end{itemize}
+\item Измерение наблюдаемой $\hat{A}$ (чисто дискретный спектр) в состоянии $\hat{\rho}$  \begin{itemize}
+            \item вероятность получить значение $a_i$, если система находится в состоянии с матрицей плотности $\hat{\rho}$: \\
+            $ \hat{A}\ket{\alpha_n}=a_n\ket{\alpha_n};\; P_{a_n} = \matrixel{\alpha_n}{\hat{\rho}}{\alpha_n} $
+            \item вероятность получить значение $a_i$, если система находится в состоянии с волновой функцией $\ket{\psi}$: \\
+            $ \text{det}(\hat{A}-a_n E)\ket{a} = 0 \Rightarrow \ket{\xi_{a_n}};\; P_{a_n} = \abs{\braket{\xi_{a_n}}{\psi}}^2 $
+        \end{itemize}
+\item Составные системы  \begin{itemize}
+            \item выражение для матрицы плотности подсистемы:
+            $ \rho_1 = \text{Tr}_2 \rho;\; \rho_2 = \text{Tr}_1 \rho $
+        \end{itemize}
+\item Динамика  \begin{itemize}
+            \item Уравнение Гайзенберга для произвольного оператора $\hat{A}$:
+            $ \d{\hat{A}(t)}{t}=\frac{i}{\hbar}\comm{H}{A(t)} $
+            \item Нестационарное уравнение Шредингера (общий случай):
+            $ i\hbar \d{}{t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)} $
+            \item Стационарное уравнение Шредингера (общий случай):
+            $ \hat{H}\ket{\psi} = E\ket{\psi} $
+        \end{itemize}
+\item Одномерное движение материальной точки  \begin{itemize}
+            \item каноническое коммутационное соотношение:
+            $ \comm{x}{p} = i\hbar $
+            \item нестационарное уравнение Шредингера в координатном представлении: \\
+            $ i\hbar \pd{}{t}\psi(\v{r},t) = -\frac{\hbar^2}{2m}\triangle\psi(\v{r},t)+V(\v{r},t)\psi(\v{r},t) $
+            \item стационарное уравнение Шредингера в координатном представлении: \\
+            $ -\frac{\hbar^2}{2m}\triangle\psi(\v{r}) + (V(\v{r})-E)\psi(\v{r}) = 0 $
+            \item уравнение непрерывности:
+            $ \text{div}\ \v{j} + \pd{\rho}{t} = 0 $
+        \end{itemize}
+\item Гармонический осциллятор  \begin{itemize}
+            \item
+            $ \comm{a}{a^\dagger} = 1 $
+            \item
+            $ \hat{a}\ket{n} = \sqrt{n}\ket{n-1};\; \hat{a}^\dagger\ket{n} = \sqrt{n+1}\ket{n+1} $
+            \item уровни энергии:
+            $ E_n = \hbar\omega(n+\frac12) $
+            \item когерентное состояние $\ket{\alpha}$: \\
+            $ \hat{a}\ket{\alpha} = \alpha\ket{\alpha};\; \bra{\alpha}\hat{a}^\dagger = \bra{\alpha}\alpha^* $
+        \end{itemize}
+\item Трехмерное движение материальной точки  \begin{itemize}
+            \item канонические коммутационные соотношения:
+            $ \commi{x}{i}{p}{j} = i\hbar\delta_{ij} $
+            \item нестационарное уравнение Шредингера в координатном представлении: \\
+            $ i\hbar \pd{}{t}\psi(x,t) = -\frac{\hbar^2}{2m}\triangle\psi(x,t)+V(x,t)\psi(x,t) $
+            \item уравнение непрерывности:
+            $ \pd{j}{x} + \pd{\rho}{t} = 0 $
+        \end{itemize}
+\item Момент  \begin{itemize}
+            \item определение момента:
+            $ \commi{l}{i}{l}{j} = i\epsilon_{ijk}\hat{l}_k $
+            \item
+            $ \braket{l'm'}{lm} = \delta_{ll'}\delta_{mm'};\; \hat{\v{l}}^2\ket{lm}=l(l+1)\ket{lm};\; \hat{l}_z\ket{lm}=m\ket{lm} $\\
+            $ l_{+}\ket{lm}=\ket{l,m+1}\sqrt{(l-m)(l+m+1)} $\\
+            $ l_{-}\ket{lm}=\ket{l,m-1}\sqrt{(l+m)(l-m+1)}$
+            \item определение скалярного и векторного операторов: \\
+            $ \commi{l}{i}{A}{} = 0 \Rightarrow \hat{A} $ -- скаляр \\
+            $ \commi{l}{i}{B}{j} = i\epsilon_{ijk}\hat{B}_k \Rightarrow \hat{B} $ -- вектор
+            \item матричные элементы скалярного оператора $\hat{A}$:
+            $ \matrixel{l'm'}{\hat{A}}{lm} = \delta_{ll'}\delta_{mm'}a(l) $
+        \end{itemize}
+\item Формулы для операторов  \begin{itemize}
+            \item
+            $ e^{z\hat{A}}\hat{B}e^{-z\hat{A}} = \hat{B} + \frac{z}{1!}\underbrace{\comm{A}{B}}_{K_1} + \frac{z^2}{2!}\underbrace{\comm{A}{K_1}}_{K_2} = \hat{B}+\sum\limits_{n=1}^{\infty}\frac{z^n}{n!}\comm{A}{K_n} $
+            \item
+            $ \comm{A}{B}=\lambda \Rightarrow \comml{A}{\hat{f}(\hat{B})}=\lambda \pd{\hat{f}(\hat{B})}{\hat{B}} $
+            \item явный вид матриц Паули:
+            $ \hat{\sigma}_1=\begin{pmatrix} 0&1\\1&0 \end{pmatrix};\; \hat{\sigma}_2=\begin{pmatrix} 0&-i\\i&0 \end{pmatrix};\; \hat{\sigma}_3=\begin{pmatrix} 1&0\\0&-1 \end{pmatrix} $
+            \item
+            $ (\v{a}\hat{\vec{\sigma}})(\v{b}\hat{\vec{\sigma}}) = \hat{E}(\v{a},\v{b}) + i([\v{a}\times\v{b}],\hat{\vec{\sigma}}) $
+        \end{itemize}
+\end{enumerate}
+
+\begin{enumerate}[label=\textbf{\underline{\arabic*.}}]
+\item Стационарная теория возмущений  \begin{itemize}
+            \item Условие применимости: \\
+            $ \abs{V_{ml}} \ll \abs{E_m^0 - E_l^0}\, \forall m,l;\; V_{ml}=\matrixel{\psi_m^{(0)}}{\hat{V}}{\psi_l^{(0)}} $
+            \item Невырожденный уровень. Поправка к энергии, 1-й и 2-й порядки: \\
+            $ E_l^{(1)} = V_{ll};\; E_l^{(2)} = \sum_{n \neq l} \frac{\abs{V_{ln}}^2}{E_l^{(0)} - E_n^{(0)}} $
+            \item Невырожденный уровень. Поправка к волновой функции, 1-й порядок: \\
+            $ \ket{\psi_n^{(1)}} = \sum_{m \neq n} \frac{\matrixel{\psi_m^{(0)}}{\hat{V}}{\psi_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}} $
+            \item Вырожденный уровень. Поправка к энергии, 1-й порядок: \\
+            $ \text{det}(V_{\alpha\beta} - \delta_{\alpha\beta}E^{(1)})=0 \Rightarrow E^{(1)} $ -- секулярное уравнение
+
+        \end{itemize}
+\item Потенциальное рассеяние  \begin{itemize}
+            \item Амплитуда рассеяния в 1-м Борновском приближении: \\
+            $ f(\v{q}) = -\frac{m}{2\pi\hbar^2}\int e^{-i\v{q}\v{x}} V(\v{x})d\v{x} $ \\
+            Условия применимости 1-го Борновского приближения: \\
+            $ md^2\bar{V} \ll \hbar^2;\; \bar{V} = \frac1{2\pi d^2} \abs{\int \frac1{\v{r}}V(\v{r})d\v{r}};\; kd \ll 1 $ -- малые энергии \\
+            $ md^2\tilde{V} \ll \hbar^2;\; \tilde{V} = \frac1{d} \abs{\int V(\v{r})d\v{r}};\; kd \gg 1 $ -- высокие энергии \\
+            \item Условие унитарности для парциальных амплитуд рассеяния: \\
+            $ \Im{f_l} = k \abs{f_l}^2 $
+            \item Выражение для парциальной амплитуды рассеяния через фазу рассеяния: \\
+            $ f_l = \frac1{2ik}(2l+1)(e^{2i\delta_l} - 1) $
+            \item Асимптотика для решения радиального уравнения Шредингера в задаче рассеяния: \\
+            $ R_l(r \rightarrow \infty) = i^l e^{i\delta_l} \frac1{kr} \cos(kr+\delta_l - \frac{\pi(l+1)}{2}) $
+
+        \end{itemize}
+\item Переходы  \begin{itemize}
+            \item Переходы мгновенные и адиабатические: определение и результат: \\
+            Мгновенные переходы: $ \hat{H} = \hat{H}_0 $ при $ t=0 $, потом скачок $ \hat{H} = \hat{H}_0 + \hat{H}_I\,:\, \tau \ll \frac1{\omega_{fi}} $ \\
+            $ P_{f'} = \abs{\frac{\matrixel{\psi_f}{\hat{H}_I}{\psi_i}}{E_f-E_i}}^2 $ \\
+            Адиабатические переходы: то же самое, но переход плавный без скачка\,:\, $ \tau \gg \frac1{\omega_{fi}} $\\
+            ``Адиабатические переходы --- это те, которые не происходят.'' Силаев
+            \item Вероятность перехода в первом порядке нестационарной теории возмущений: \\
+            $ P_f(t) = \abs{C_f(t)}^2;\; C_f^{(0)}=\delta_{fi};\; C_f^{(1)}=-\frac{i}{\hbar}\int_0^t e^{i\omega_{fi}t}\matrixel{\psi_f}{\hat{H}_I(t)}{\psi_i}dt;\;\omega_{ii}=0 $
+            \item Уравнение эволюции волновой функции в представлении взаимодействия (Дирака): \\
+            $ \psi=e^{iH_0t}\varphi;\; i\d{\psi}{t}=(\hat{H}_0+\hat{H}_I)\psi \Rightarrow i\d{\varphi}{t}=e^{iH_0t}\hat{H}_I e^{iH_0t}\varphi $
+            \item Золотое правило Ферми: \\
+            $ P_{fi} = \frac{2\pi}{\hbar}\abs{\matrixel{\psi_f}{\hat{V}}{\psi_i}}^2\rho(E_f) $ -- постоянное возмущение\\
+            $ P_{fi} = \frac{2\pi}{\hbar}\abs{\matrixel{\psi_f}{\hat{\Omega}_\pm}{\psi_i}}^2\delta(E_f-E_i\pm \hbar\omega) $ -- периодическое возмущение $ \hat{V}_\pm=\hat{\Omega}_\pm e^{\pm i\omega t} $
+
+        \end{itemize}
+\item Вторичное квантование.  \begin{itemize}
+            \item Канонические коммутационные соотношения для операторов рождения и уничтожения: \\
+            $ \commi{a}{m}{a^\dagger}{n} = \delta_{mn};\; \commi{a}{m}{a}{n} = \commi{a^\dagger}{m}{a^\dagger}{n} = 0 $
+            \item Оператор волновой функции: \\
+            $ \hat{\psi}(x) = \sum_n \psi_n(x)\hat{a}_n;\; \psi_n = \braket{n}{\psi} $
+            \item Выражения для одночастичного и двухчастичного операторов: \\
+            $ \hat{V} = \int dx\ \hat{\psi}^\dagger(x)V(x)\hat{\psi}(x) = \sum_{kl} V_{kl}\ \hat{a}^\dagger_k\ \hat{a}_l $ -- одночастичный \\
+            $ \hat{W} = \frac12 \int dxdy\ \hat{\psi}^\dagger(x)\hat{\psi}^\dagger(y)W(x,y)\hat{\psi}(y)\hat{\psi}(x) = \sum_{klmn} \frac12 W_{klmn}\ \hat{a}^\dagger_k\ \hat{a}^\dagger_l\ \hat{a}_m\ \hat{a}_n $ -- двухчастичный
+
+        \end{itemize}
+\item Излучение  \begin{itemize}
+            \item Коммутационные соотношения для операторов рождения и уничтожения фотонов: \\
+            $ \commi{a}{\v{k}p}{a^\dagger}{\v{k}'p'} = \delta_{\v{k}\v{k}'}\delta_{pp'};\; \commi{a}{\v{k}p}{a}{\v{k}'p'} = 0 $
+            \item Энергия и импульс поля излучения: \\
+            $ \hat{H} = \sum_{\v{k},p}\hbar\omega_\v{k}\ \hat{a}^\dagger_{\v{k},p}\ \hat{a}_{\v{k},p} $\\
+            $ \hat{\v{p}} = \sum_{\v{k},p}\hbar\v{k}\ \hat{a}^\dagger_{\v{k},p}\ \hat{a}_{\v{k},p} $\\
+            \item Оператор вектор-потенциала: \\
+            $ \hat{\v{A}}_\Gamma(\v{x},t) = \sum_{\v{k},p}\sqrt{\frac{2\pi\hbar c^2}{\omega_\v{k}L^3}}\cdot e_{\v{k},p}(\hat{a}_{\v{k},p}\cdot e^{i\v{k}\v{x}-i\omega_\v{k}t}+\hat{a}^\dagger_{\v{k},p}\cdot e^{i\v{k}\v{x}-i\omega_\v{k}t}) $
+            \item Формула для электрического дипольного излучения: \\
+            $ \d{I_p}{\Omega_\v{k}} = \frac{e^2 \omega_\v{k}^4}{2\pi c^3} \abs{\matrixel{\psi_2}{\hat{\v{x}}}{\psi_1}}^2;\; I = \sum_p \int d\Omega_\v{k}\d{I_p}{\Omega_\v{k}} = \frac{\hbar\omega}{\tau} $
+
+        \end{itemize}
+\item Уравнение Дирака  \begin{itemize}
+            \item Уравнение Дирака: \\
+            $ H_D = (\vec{\alpha}\v{p}c+\beta mc^2)+(-e\vec{\alpha}\v{A}+e\varphi) $\\
+            $ \vec{\alpha} = \begin{pmatrix} 0 & \vec{\sigma} \\ \vec{\sigma} & 0 \end{pmatrix} =
+            \left\{
+                \begin{pmatrix}0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0\end{pmatrix};
+                \begin{pmatrix}0&0&0&\scalebox{0.75}[1.0]{-}i\\0&0&i&0\\0&\scalebox{0.75}[1.0]{-}i&0&0\\i&0&0&0\end{pmatrix};
+                \begin{pmatrix}0&0&1&0\\0&0&0&\scalebox{0.75}[1.0]{-}1\\1&0&0&0\\0&\scalebox{0.75}[1.0]{-}1&0&0\end{pmatrix}
+            \right\} $ \\
+            $\beta = \begin{pmatrix} E & 0 \\ 0 & -E \end{pmatrix} =
+            \begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&\scalebox{0.75}[1.0]{-}1&0\\0&0&0&\scalebox{0.75}[1.0]{-}1\end{pmatrix};\;
+            \v{p} = -i\hbar\nabla $
+
+        \end{itemize}
+\end{enumerate}
+\vfill\line(1,0){500}
+\end{document}
