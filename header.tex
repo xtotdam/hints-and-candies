@@ -24,11 +24,16 @@
 
 \let\divsymb=\div % rename builtin command \div to \divsymb
 \let\underdot=\d % rename builtin command \d{} to \underdot{}
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
 
 \DeclareMathOperator{\sinc}{sinc}
 \DeclareMathOperator{\const}{const}
 \DeclareMathOperator{\Tr}{Tr}   %trace
 \DeclareMathOperator{\Dim}{dim} %dimensions
+
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} % for vectors of Greek letters
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
 
 \newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
 \newcommand{\norm}[1]{\lVert #1 \rVert} % for norm ||f||
@@ -45,14 +50,15 @@
 \newcommand{\pddv}[3]{\frac{\partial^2 #1}{\partial #2 \partial #3}} % for double partial derivatives, diff. variables
 \newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2} \right)_{#3}} % for thermodynamic partial derivatives
 
-\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
-\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
-\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|\left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac kets
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac bras
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|\left. \!#2 \vphantom{#1} \right>} % for Dirac brackets
 \newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right| #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
 
 \newcommand{\comml}[2]{\left[ \hat{#1}, #2 \right]} % [A,...]
 \newcommand{\commr}[2]{\left[ #1, \hat{#2} \right]} % [...,B]
 \newcommand{\comm}[2]{\left[ \hat{#1}, \hat{#2} \right]} % for commutator for only two operators like [A,B]
+\newcommand{\commi}[4]{\left[ \hat{#1}_{#2}, \hat{#3}_{#4} \right]} % for commutator for only two operators like [A,B] with indices
 
 \renewcommand{\div}[1]{\operatorname{div}\vec{#1}} % dirty hack for divergence
 \newcommand{\rot}[1]{\operatorname{rot}\vec{#1}}

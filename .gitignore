@@ -7,3 +7,4 @@
 *.url
 *.lnk
 clone_to_common.cmd
+*.fuse_hidden*
