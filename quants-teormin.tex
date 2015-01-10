@@ -1,6 +1,6 @@
 \input{header.tex}
 \begin{document}
-\rfoot{\praiseme{Xtotdam, Fedor B.}}
+\rfoot{\praiseme{Xtotdam, Fedor B., Dmitry V.}}
 
 \fontsize{20}{24}
 \center{\bfseries Квантовая теория - теоретический минимум}
@@ -39,7 +39,7 @@
         \end{itemize}
 \item Динамика  \begin{itemize}
             \item Уравнение Гайзенберга для произвольного оператора $\hat{A}$:
-            $ \d{\hat{A}(t)}{t}=\frac{i}{\hbar}\comm{H}{A(t)} $
+            $ \d{\hat{A}(t)}{t}=\frac{i}{\hbar}\comm{H}{A(t)}+\pd{\hat{A}}{t} $
             \item Нестационарное уравнение Шредингера (общий случай):
             $ i\hbar \d{}{t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)} $
             \item Стационарное уравнение Шредингера (общий случай):
@@ -106,7 +106,7 @@
             \item Невырожденный уровень. Поправка к энергии, 1-й и 2-й порядки: \\
             $ E_l^{(1)} = V_{ll};\; E_l^{(2)} = \sum_{n \neq l} \frac{\abs{V_{ln}}^2}{E_l^{(0)} - E_n^{(0)}} $
             \item Невырожденный уровень. Поправка к волновой функции, 1-й порядок: \\
-            $ \ket{\psi_n^{(1)}} = \sum_{m \neq n} \frac{\matrixel{\psi_m^{(0)}}{\hat{V}}{\psi_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}} $
+            $ \ket{\psi_n^{(1)}} = \sum_{m \neq n} \frac{\matrixel{\psi_m^{(0)}}{\hat{V}}{\psi_n^{(0)}}}{E_n^{(0)} - E_m^{(0)}}\ket{\psi^{(0)}_m} $
             \item Вырожденный уровень. Поправка к энергии, 1-й порядок: \\
             $ \text{det}(V_{\alpha\beta} - \delta_{\alpha\beta}E^{(1)})=0 \Rightarrow E^{(1)} $ -- секулярное уравнение
 
