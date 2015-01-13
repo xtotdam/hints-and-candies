@@ -1,5 +1,6 @@
 \input{header.tex}
 \begin{document}
+\lfoot{\scalebox{.4}{https://github.com/xtotdam/hints-and-candies}}
 \rfoot{\praiseme{Xtotdam, Fedor B., Dmitry V.}}
 
 \fontsize{20}{24}
@@ -49,11 +50,11 @@
             \item каноническое коммутационное соотношение:
             $ \comm{x}{p} = i\hbar $
             \item нестационарное уравнение Шредингера в координатном представлении: \\
-            $ i\hbar \pd{}{t}\psi(\v{r},t) = -\frac{\hbar^2}{2m}\triangle\psi(\v{r},t)+V(\v{r},t)\psi(\v{r},t) $
+            $ i\hbar \pd{}{t}\psi(x,t) = -\frac{\hbar^2}{2m}\triangle\psi(x,t)+V(x,t)\psi(x,t) $
             \item стационарное уравнение Шредингера в координатном представлении: \\
-            $ -\frac{\hbar^2}{2m}\triangle\psi(\v{r}) + (V(\v{r})-E)\psi(\v{r}) = 0 $
+            $ -\frac{\hbar^2}{2m}\triangle\psi(x) + (V(x)-E)\psi(x) = 0 $
             \item уравнение непрерывности:
-            $ \text{div}\ \v{j} + \pd{\rho}{t} = 0 $
+            $ \pd{j}{x} + \pd{\rho}{t} = 0 $
         \end{itemize}
 \item Гармонический осциллятор  \begin{itemize}
             \item
@@ -69,9 +70,9 @@
             \item канонические коммутационные соотношения:
             $ \commi{x}{i}{p}{j} = i\hbar\delta_{ij} $
             \item нестационарное уравнение Шредингера в координатном представлении: \\
-            $ i\hbar \pd{}{t}\psi(x,t) = -\frac{\hbar^2}{2m}\triangle\psi(x,t)+V(x,t)\psi(x,t) $
+            $ i\hbar \pd{}{t}\psi(\v{r},t) = -\frac{\hbar^2}{2m}\triangle\psi(\v{r},t)+V(\v{r},t)\psi(\v{r},t) $
             \item уравнение непрерывности:
-            $ \pd{j}{x} + \pd{\rho}{t} = 0 $
+            $ \text{div}\ \v{j} + \pd{\rho}{t} = 0 $
         \end{itemize}
 \item Момент  \begin{itemize}
             \item определение момента:
@@ -115,8 +116,9 @@
             \item Амплитуда рассеяния в 1-м Борновском приближении: \\
             $ f(\v{q}) = -\frac{m}{2\pi\hbar^2}\int e^{-i\v{q}\v{x}} V(\v{x})d\v{x} $ \\
             Условия применимости 1-го Борновского приближения: \\
-            $ md^2\bar{V} \ll \hbar^2;\; \bar{V} = \frac1{2\pi d^2} \abs{\int \frac1{\v{r}}V(\v{r})d\v{r}};\; kd \ll 1 $ -- малые энергии \\
-            $ md^2\tilde{V} \ll \hbar^2;\; \tilde{V} = \frac1{d} \abs{\int V(\v{r})d\v{r}};\; kd \gg 1 $ -- высокие энергии \\
+            $\abs{V} \ll \frac{\hbar^2}{2ma^2} $\\
+            ($ md^2\bar{V} \ll \hbar^2;\; \bar{V} = \frac1{2\pi d^2} \abs{\int \frac1{\v{r}}V(\v{r})d\v{r}};\; kd \ll 1 $ -- малые энергии) \\
+            ($ md^2\tilde{V} \ll \hbar^2kd;\; \tilde{V} = \frac1{d} \abs{\int V(\v{r})d\v{r}};\; kd \gg 1 $ -- высокие энергии)
             \item Условие унитарности для парциальных амплитуд рассеяния: \\
             $ \mathfrak{Im}{f_l} = k \abs{f_l}^2 $
             \item Выражение для парциальной амплитуды рассеяния через фазу рассеяния: \\
@@ -166,6 +168,7 @@
         \end{itemize}
 \item Уравнение Дирака  \begin{itemize}
             \item Уравнение Дирака: \\
+            $ i\hbar\pd{}{t}\ket{\psi} = H_D\ket{\psi} $ \\
             $ H_D = (\vec{\alpha}\v{p}c+\beta mc^2)+(-e\vec{\alpha}\v{A}+e\varphi) $\\
             $ \vec{\alpha} = \begin{pmatrix} 0 & \vec{\sigma} \\ \vec{\sigma} & 0 \end{pmatrix} =
             \left\{
